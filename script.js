@@ -32,7 +32,15 @@ function updateLibraryDisplay(myLibrary) {
     myLibrary.forEach(element => {
         const div = document.createElement('div');
         div.classList.add('card');
-        div.innerHTML = `${element.info()}`;
+        console.log(element.haveRead === true ? "Read" : "Haven't Read");
+        div.innerHTML =
+            `<div class="book-title">${element.title}</div>
+                <div class="book-info">
+                    <div class="book-author">${element.author}</div>
+                    <div class="book-pages">${element.pages} pages</div>
+                    <div class="book-read">${element.haveRead === true ? "Read" : "Haven't Read"}</div>
+                </div>
+            </div>`;
         display.appendChild(div);
     });
 }
