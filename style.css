@@ -3,13 +3,64 @@
     margin: 0;
 }
 
+dialog {
+    padding: 15px;
+    height: 300px;
+    width: 300px;
+    position:absolute;
+    top: 50vh;
+    left: 50vw;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+
+dialog > form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+::backdrop {
+    background-image: linear-gradient(
+      45deg,
+      rgb(161, 104, 161),
+      rebeccapurple,
+      rgb(139, 37, 11),
+      rgb(255, 186, 243)
+    );
+    opacity: 0.75;
+}  
+
+.dialog-text-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.dialog-text-inputs > input {
+    padding: 5px;
+}
+
+#confirmButton, #cancelButton {
+    padding: 5px;
+}
+
+#radio-segment {
+    display: flex;
+    gap: 20px;
+}
+
 body, html {
     height: 100%;
     width: 100%;
     background-color: black;
 }
 
-body {
+.container {
+    height: 100%;
+    width: 100%;
     display: grid;
     grid-template: 1fr 30fr / 1fr 8fr;
 }

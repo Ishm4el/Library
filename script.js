@@ -45,6 +45,12 @@ function updateLibraryDisplay(myLibrary) {
     });
 }
 
+const showButton = document.getElementById("showDialog");
+const addBookDialog = document.getElementById("addDialog");
+showButton.addEventListener("click", () => {
+    addBookDialog.showModal();
+})
+
 updateLibraryDisplay(myLibrary);
 
 

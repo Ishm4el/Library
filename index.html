@@ -8,27 +8,60 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="sidebar">
-        <h1>The Majestic Library</h1>
-        <br><br>
-        <ul>
-            <li>Home</li>
-            <li>Recent</li>
-            <li>Favorites</li>
-            <li>Search</li>
-            <li>History</li>
-        </ul>
-        <button>Add Book</button>
-        <ul>
-            <li>Help</li>
-            <li>Support</li>
-            <li>Privacy</li>
-        </ul>
-    </div>
-    <div id="topbar">
-    </div>
-    <div id="display">
-
+    <dialog id="addDialog">
+        <form>
+            <div class="dialog-text-inputs">
+                <label for="input-title">Book Title</label>
+                <input type="text" name="bookTitle" id="input-title">
+            </div>
+            <div class="dialog-text-inputs">
+                <label for="input-author">Author</label>
+                <input type="text" name="bookAuthor" id="input-author">
+            </div>
+            <div class="dialog-text-inputs">
+                <label for="input-pages">Page count</label>
+                <input type="number" name="bookPages" id="input-pages">
+            </div>
+            <div id="radio-segment">
+                <div>
+                    <label for="input-read">Completed</label>
+                    <input type="radio" name="book-read" id="input-read" value="1">
+                </div>
+                <div>
+                    <label for="input-not-read">Unfinished</label>
+                    <input type="radio" name="book-read" id="input-not-read" value="0">
+                </div>
+            </div>
+            <div>
+                <button value="cancel" formmethod="dialog" id="cancelButton">Cancel</button>
+                &nbsp; &nbsp;
+                <button type="submit" id="confirmButton">Confirm</button>
+            </div>
+        </form>
+    </dialog>
+    <div class="container">
+        <div id="sidebar">
+            <h1>The Majestic Library</h1>
+            <br><br>
+            <ul>
+                <li>Home</li>
+                <li>Recent</li>
+                <li>Favorites</li>
+                <li>Search</li>
+                <li>History</li>
+            </ul>
+            <button id="showDialog">Add Book</button>
+        
+            <ul>
+                <li>Help</li>
+                <li>Support</li>
+                <li>Privacy</li>
+            </ul>
+        </div>
+        <div id="topbar">
+        </div>
+        <div id="display">
+        </div>
     </div>
 </body>
 </html>
