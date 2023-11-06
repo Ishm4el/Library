@@ -12,30 +12,30 @@
         <form>
             <div class="dialog-text-inputs">
                 <label for="input-title">Book Title</label>
-                <input type="text" name="bookTitle" id="input-title">
+                <input type="text" name="bookTitle" id="input-title" required>
             </div>
             <div class="dialog-text-inputs">
                 <label for="input-author">Author</label>
-                <input type="text" name="bookAuthor" id="input-author">
+                <input type="text" name="bookAuthor" id="input-author" required>
             </div>
             <div class="dialog-text-inputs">
                 <label for="input-pages">Page count</label>
-                <input type="number" name="bookPages" id="input-pages">
+                <input type="number" name="bookPages" id="input-pages" required>
             </div>
             <div id="radio-segment">
                 <div>
                     <label for="input-read">Completed</label>
-                    <input type="radio" name="book-read" id="input-read" value="1">
+                    <input type="radio" name="book-read" id="input-read" value="1" required >
                 </div>
                 <div>
                     <label for="input-not-read">Unfinished</label>
-                    <input type="radio" name="book-read" id="input-not-read" value="0">
+                    <input type="radio" name="book-read" id="input-not-read" value="0" checked>
                 </div>
             </div>
-            <div>
-                <button value="cancel" formmethod="dialog" id="cancelButton">Cancel</button>
-                &nbsp; &nbsp;
+            <div id="form-buttons">
                 <button type="submit" id="confirmButton">Confirm</button>
+                &nbsp; &nbsp;
+                <button value="cancel" formmethod="dialog" id="cancelButton">Cancel</button>
             </div>
         </form>
     </dialog>

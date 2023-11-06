@@ -52,6 +52,11 @@ dialog > form {
     gap: 20px;
 }
 
+#form-buttons {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 body, html {
     height: 100%;
     width: 100%;
@@ -103,10 +108,14 @@ body, html {
 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 300px;
+    grid-auto-columns: auto;
 
     gap: 10px;
     padding: 10px;
     overflow: auto;
+    position: relative;
 }
 
 .card {
@@ -118,8 +127,37 @@ body, html {
     flex-direction: column;
     justify-content: space-evenly;
     border: 10px solid gray;
+    position: relative;
+}
+
+.card:hover {
+    border-color: rgb(205, 212, 219);
 }
 
 .book-title {
     font-size: 2.2rem;
+}
+
+.remove-button {
+    position: absolute;
+    top: 1vh;
+    padding: 1px;
+    background-color: rgb(150, 127, 127);
+}
+
+.book-read {
+    position: relative;
+}
+.book-read span {
+    margin-right: 5px;
+}
+.toggle-read {
+    padding: 1px;
+    background-color: darkgrey;
+    position: absolute;
+    top: 8px;
+}
+
+.remove-button:hover {
+    background-color: lightpink;
 }
